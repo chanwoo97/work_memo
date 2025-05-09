@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .container {
+            border: 5px solid pink;
+            display: grid;
+            /* grid-template-columns: 100px 200px 300px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(3, 1fr);
+            /* 3의 의미 : 요소 갯수, 1fr : 크기지정 */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /* auto-fit : 요소 갯수 자동지정, minmax(최소, 최대) */
+            /* fr:fraction 분수의 약자 */
+
+        }
+
+        .box {
+            border: 1px solid red;
+            /* width: 200px;     */
+        }
+
+        .container img {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+            /* 가로세로 유지 (원본유지) */
+            /* transition: transform 0.5s; */
+            /* 해당 이미지를 0.2초 정도 애니메이션 효과 */
+            border-radius: 8px;
+            /* 이미지 모서리 둥글게 처리하는 효과 */
+            background-color: aqua;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+
+            /* 주기를 지정해보기 */
+            /* transition-property: background-color;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s; */
+
+        }
+
+        .container img:hover {
+            /* transform: scale(1.03); */
+            /* 마우스 오버(커서를 위에 올릴 경우) 확대 효과     */
+
+            /* transform: translate(100px, 100px); */
+            /* x,y축으로 이동시키는 효과 */
+
+            /* transform: rotate(45deg); */
+            /* 각도 설정에 따라 회전하는 효과 */
+
+            /* transform: skew(45deg, 30deg); */
+            /* 수치에 따라 기울어짐 */
+
+            /* transition-property: background-color; */
+
+
+        }
+
+        .container .test1 {
+            width: 300px;
+            border: 2px solid blue;
+        }
+    </style>
+
+
+    <h2>나의 사진첩</h2>
+    <div class="container">
+        
+        <div class="test1">
+            <img src="img/test1.jpg" alt="text10">
+        </div>
+        
+        <!-- <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div> -->
+        <img src="img/test1.jpg" alt="text1">
+        <img src="img/test2.jpg" alt="text2">
+        <img src="img/test3.jpg" alt="text3">
+        <img src="img/test4.jpg" alt="text4">
+        <img src="img/test5.jpg" alt="text5">
+        <img src="img/test6.jpg" alt="text6">
+    </div>
+
+    <h2>나의 상품</h2>
+    <div class="container">
+        <!-- <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div> -->
+        <img src="img/test1.jpg" alt="text1">
+        <img src="img/test2.jpg" alt="text2">
+        <img src="img/test3.jpg" alt="text3">
+        <img src="img/test4.jpg" alt="text4">
+        <img src="img/test5.jpg" alt="text5">
+        <img src="img/test6.jpg" alt="text6">
+    </div>
+
+
+
+
+
+</body>
+
+</html>
