@@ -18,6 +18,28 @@
 
         }
 
+        /* 애니메이션 설정 후, 적용해보기
+        순서1
+        설정, 정의 */
+        @keyframes fadeSlideIn {
+
+            /* 초기, 중간, 마지막 단계 총 3단계 화면에 표시 */
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9) rotate(-5deg);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateY(10px) scale(1.02) rotate(2deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px) scale(1) rotate(0deg);
+            }
+        }
+
         .img-wrapper img {
             width: 200px;
             height: 200px;
@@ -28,6 +50,7 @@
 
         }
 
+        /* 순서2 적용 */
         .img-wrapper {
             background-color: white;
             border-radius: 8px;
@@ -36,7 +59,25 @@
 
             /* 트랜지션 작업 진행하기 */
             /* 1.배경색 변경, 2.확대 */
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            /* transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; */
+
+            /* 애니메이션 적용해보기 */
+            animation-name: fadeSlideIn;
+            /* 적용할 키프레임 이름 */
+            animation-duration: 1.5s;
+            /* 얼마나 오래 지속할지 */
+            animation-timing-function: ease-in-out;
+            /* 가속도 곡선, 천천히 진입, 중간 빠르고, 나올때는 천천히 */
+            animation-delay: 0.2s;
+            /* 시작 전 대기 시간 */
+            animation-iteration-count: infinite;
+            /* 반복 횟수, infinite-무한대 */
+            animation-duration: normal;
+            /* 정방향, reverse 역방향 */
+            animation-fill-mode: both;
+            /* 종료 후, 스타일 유지 여부, forwards(앞) both(양쪽) */
+            animation-play-state: running;
+            /* 진행 할지, 멈출지 여부 */
 
         }
 
@@ -49,8 +90,6 @@
         .test1 {
             border: 2px solid blue;
         }
-
-        
     </style>
 
     <h2>나의 사진첩, transition 테스트 공간</h2>
@@ -70,14 +109,6 @@
         </div>
 
     </div>
-
-
-
-
-
-
-
-
 
 </body>
 
