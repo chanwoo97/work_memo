@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>방법2</h2>
+    <img id="sample_img1" src="/img/test1.jpg" alt="샘플이미지1" width="300px">
+    <input type="button" id="hide" value="hide">
+    <input type="button" id="show" value="show">
+
+    <h2>방법3</h2>
+    <img id="sample_img2" src="/img/test2.jpg" alt="샘플이미지2" width="300px">
+    <input type="button" id="hide1" value="hide">
+    <input type="button" id="show1" value="show">
+
+    <h2>방법4</h2>
+    <img id="sample_img3" src="/img/test3.jpg" alt="샘플이미지3" width="300px">
+    <input type="button" id="hide2" value="hide">
+    <input type="button" id="show2" value="show">
+
+    <h2>방법5 버튼하나로 show/hide 작업하기</h2>
+    <img id="sample_img4" src="/img/test4.jpg" alt="샘플이미지4" width="300px">
+    <input type="button" id="toggle_btn" value="hide">
+
+
+    <script>
+        // 방법2
+        document.getElementById('hide').onclick = function () {
+            document.getElementById('sample_img1').style.display = 'none'
+            alert('숨기기')
+        }
+        document.getElementById('show').onclick = function () {
+            document.getElementById('sample_img1').style.display = 'block'
+            alert('보이기')
+        }
+
+
+        // 방법3
+        const hide1btn = document.getElementById('hide1')
+        hide1btn.addEventListener('click', function () {
+            alert('숨기기')
+            document.getElementById('sample_img2').style.display = 'none'
+        })
+
+        const show1btn = document.getElementById('show1')
+        show1btn.addEventListener('click', function () {
+            alert('보이기')
+            document.getElementById('sample_img2').style.display = 'block'
+        })
+
+
+        // 방법4
+        const hide2handleClick = () => {
+            alert('숨기기')
+            document.getElementById('sample_img3').style.display = 'none'
+        }
+        const show2handleClick = () => {
+            alert('보이기')
+            document.getElementById('sample_img3').style.display = 'block'
+        }
+
+        const hide2btn = document.getElementById('hide2')
+        const show2btn = document.getElementById('show2')
+
+        hide2btn.addEventListener('click', hide2handleClick)
+        show2btn.addEventListener('click', show2handleClick)
+
+        // 방법 5
+        // 하나의 버튼으로, 스위치 처럼 on/off, show/hide
+        // 최초 처음 상태, 버튼 : hide, 이미지 : 보여짐.
+        // 버큰 클릭 hide 클릭,
+        // 2번째 상태, 버튼 : show, 이미지 : 안 보여짐.
+        // 버튼 클릭 show 클릭,
+        // 3번째 상태, 버튼 : hide, 이미지 : 보여짐.
+
+        // 방법4, 1) 버튼 요소 분리 2) 기능 분리
+
+        // 이미지도 선택, 버튼 선택
+
+        
+
+        // 강사님 코드
+        // const toggleClick = () => {
+        //     const img = document.querySelector('#test-img');
+        //     const toggleBtn = document.getElementById('btn-test4-toggle');
+        //     if (img.style.display === 'none') {
+        //         img.style.display = 'block'
+        //         toggleBtn.value = '숨기기'
+        //     } else {
+        //         img.style.display = 'none'
+        //         toggleBtn.value = '보여주기'
+        //     }
+        // }
+
+
+
+        
+        const toggle_btn = document.getElementById('toggle_btn');
+        const sample_img4 = document.getElementById('sample_img4');
+        toggle_btn.addEventListener('click', () => {
+            if (sample_img4.style.display === 'none') {
+                sample_img4.style.display = 'block';
+                toggle_btn.value = 'hide';
+            } else {
+                sample_img4.style.display = 'none';
+                toggle_btn.value = 'show';
+            }
+        })
+
+
+
+
+
+        // const toggle_btn = () => {
+        //     const sample_img4 = document.querySelector('sample_img4');
+        //     const toggle_btn = document.getElementById('toggle_btn');
+        // }
+
+        //조건문
+        // if(조건문) {조건문 참인 경우 실행될 코드}
+        // else {조건문 거짓인 경우 실행될 코드}
+
+        // == : 단순 값만 비교
+        // === : 값과 타입도 비교
+        // ex) 1 == "1" 값만 비교하니 같음.
+        // ex) 1 === "1" 값은 같음. 하지만 타입은 다름. 숫자 != 문자열
+        // 현재는 이미지가 안보이는 상태
+        // if (sample_img4.style.display === 'none') {
+        //     // 이미지가 보이게 변경하는 코드
+        //     sample_img4.style.display = 'block'
+        //     toggle_btn.value = 'hide'
+        // } else {
+        //     sample_img4.style.display = 'none'
+        //     toggle_btn.value = 'show'
+        // }
+
+    </script>
+</body>
+
+</html>

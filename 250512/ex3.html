@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="mianbtn" value="숨기기">
+    <img id="sample_img1" src="/img/test1.jpg" alt="샘플이미지1" width="300px">
+
+    <script>
+        const mianbtn = document.getElementById('mianbtn');
+        const sample_img1 = document.getElementById('sample_img1');
+        mianbtn.addEventListener('click', () => {
+            if (sample_img1.style.display === 'none') {
+                sample_img1.style.display = 'block';
+                mianbtn.value = '숨기기';
+                alert('보이기');
+            } else {
+                sample_img1.style.display = 'none';
+                mianbtn.value = '보이기';
+                alert('숨기기');
+            }
+        });
+    </script>
+</body>
+
+</html>
