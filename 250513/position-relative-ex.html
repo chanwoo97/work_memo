@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .tooltip-wrapper {
+            position: relative;
+            /* 기준위치(얘가 기준이 된다) */
+            /* 만약 기준위치가 없다면?
+            그럴 때는 누가 기준위치가 되느냐? -> html 태그가 기준 위치가 된다 */
+        }
+
+        .tooltip {
+            /* css에서 요소를 부모 요소를 기준으로 특정 위치에 배치할 때 사용
+            정밀한 위치 지정시 많이 사용함.
+            문서 흐름에서 제거하고, 가장 가까운, position: relative; 조상 요소를 기준으로 
+            위치를 잡기. */
+
+            /* 옵션1) 부모 요소를 기준으로 아래쪽에 고정, 문서 흐름에서 제외되어
+            다른 요소와 겹칠수 있다. */
+            position: absolute;
+            top: 100%;
+
+
+
+
+            /* 옵션2) 브라우저의 창에서 오른쪽 하단에 항상 고정. 스크롤해도 따라옴,
+            ex) 탑 버튼(맨 위로올리는 버튼) */
+            /* position: fixed;
+            right: 200px;
+            bottom: 200px; */
+
+
+
+
+            /* 옵션3) 스크롤을 내리다가 top : 0 위치에 도달하면 고정 상태로 전환됨.
+            보통 헤더나 네비게이션 메뉴에 활용. */
+            position: stroke;
+            top: 0px;
+
+
+
+            left: 0;
+            background: black;
+            color: white;
+            padding: 5px;
+        }
+
+        /* ✅ fixed 예제 */
+        .tooltip-fixed {
+            /* 옵션2,  브라우저의 창에서 오른쪽 하단에 항상 고정. 스크롤해도 따라옴,
+            예시) 탑 버튼, */
+            /* position: fixed;
+            right: 200px;
+            bottom: 200px; */
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: darkgreen;
+            color: white;
+            padding: 8px;
+            z-index: 9999;
+        }
+
+        /* ✅ sticky 예제 */
+        .sticky-header {
+            /* 옵션3, 스크롤을 내리다가 top : 0 위치에 도달하면 고정 상태로 전환됨. 
+            보통, 헤더 , 네비게이션 메뉴에 활용. */
+            position: sticky;
+            top: 0;
+            background: navy;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .spacer {
+            height: 1000px;
+            background: #f5f5f5;
+        }
+    </style>
+
+    <div class="tooltip-wrapper">
+        버튼 위에 마우스를 올려보세요
+        <div class="tooltip">툴팁 내용</div>
+    </div>
+
+</body>
+
+</html>
