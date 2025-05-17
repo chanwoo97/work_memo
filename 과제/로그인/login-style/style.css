@@ -1,4 +1,5 @@
-/* 전체 설정 */
+/* 전체설정 */
+
 @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
 
 * {
@@ -26,15 +27,27 @@ ul {
 
 #container {
     width: 1440px;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
 }
 
 /* 헤더 영역 */
 
 header {
-    width: 100%;
+    width: 1440px;
     height: 100px;
     background-color: rgb(123, 182, 126);
+}
+
+#logo a {
+    color: black;
 }
 
 #logo h1 {
@@ -88,114 +101,66 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
-/* 사이드바 영역*/
+/* 본문 영역 */
 
-#sidebar {
-    width: 200px;
-    float: left;
-    padding: 25px;
-    background-color: #f8f8f8;
-    border: 1px solid #bbb;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-left: 20px;
+.login {
+    position: relative;
+    margin: 40px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#sidebar>ul>li {
+#loginForm {
+    border: 1px solid #666;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    padding-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
     margin-top: 10px;
 }
 
-
-#sidebar>h3:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+section ul {
+    display: flex;
+    margin-top: 10px;
 }
 
-#sidebar>ul>li:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-}
-
-/* 본문 영역*/
-
-.headline:hover{
-    transform: scale(1.03);
-    transition: all 0.3s ease-in-out;
-}
-
-.headline{
-    border: 1px solid #bbb;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-    margin-bottom: 30px;
-}
-
-#article {
-    margin-left: 40px;
-    margin-top: 0px;
-    width: 900px;
-}
-
-.contents {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    width: 1100px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    margin-left: 0px;
-    font-size: 22px;
-}
-
-main>section {
-    margin-top: 60px;
-}
-
-main h2 {
-    font-size: 1.5em;
-    line-height: 2.5;
-}
-
-main div {
-    margin-top: 20px;
-}
-
-main h3 {
-    font-size: 1.2em;
-    line-height: 2.2;
-}
-
-.detail p {
-    line-height: 2.0;
-    color: #222;
-}
-
-.detail>img {
-    width: 200px;
-    height: 150px;
+section ul li {
     float: left;
-    margin-right: 50px;
-    border-radius: 20px;
-    object-fit: cover;
+    padding: 10px 5px;
+    font-size: 15px;
 }
 
-.detail>img:hover {
-    transform: scale(1.05);
-}
-
-.schedule h4 {
-    font-size: 1.2em;
-}
-
-.schedule ul {
-    list-style: none;
-}
-
-.schedule ul li {
-    line-height: 2;
-}
-
-/* 푸터 영역*/
+/* 푸터 */
 
 footer {
     width: 1440px;
