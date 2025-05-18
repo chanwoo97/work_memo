@@ -1,5 +1,4 @@
-/* 전체 설정 */
-@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Nanum+Pen+Script&display=swap');
 
 * {
     margin: 0;
@@ -8,12 +7,12 @@
 }
 
 body {
-    font-family: "Diphylleia", serif;
     background-color: #91b3d4;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Nanum Pen Script", cursive;
 }
 
 a {
@@ -29,36 +28,36 @@ ul {
     background-color: white;
 }
 
-/* 헤더 영역 */
-
-header {
+/* 헤더 영역*/
+#header {
     width: 100%;
     height: 100px;
     background-color: rgb(123, 182, 126);
 }
 
-#logo h1 {
-    color: white;
-    font-size: 28px;
-}
-
-#logo {
+.logo {
     float: left;
     width: 200px;
     height: 100px;
     line-height: 100px;
-    padding-left: 80px;
-    font-size: 35px;
+    padding-left: 50px;
+    font-size: 28px;
 }
 
 nav {
-    float: right;
+    float: left;
     width: 900px;
     height: 100px;
-    padding-top: 12px;
-    font-size: 22px;
-    font-style: normal;
-    margin-right: 200px;
+    padding-top: 15px;
+    font-size: 24px;
+    margin-left: 90px;
+}
+
+.login{
+    float: right;
+    margin-right: 100px;
+    margin-top: 35px;
+    font-size: 24px;
 }
 
 #topmenu {
@@ -76,10 +75,10 @@ nav {
     color: white;
 }
 
-#logo>a>h1:hover {
+.logo>h1>a:hover {
     color: black;
     transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #topmenu>li>a:hover {
@@ -87,6 +86,7 @@ nav {
     transform: scale(1.3);
     transition: all 0.3s ease-in-out;
 }
+
 
 /* 사이드바 영역*/
 
@@ -99,6 +99,7 @@ nav {
     border-radius: 10px;
     font-size: 20px;
     margin-left: 20px;
+    font-size: 24px;
 }
 
 #sidebar>ul>li {
@@ -106,14 +107,14 @@ nav {
 }
 
 
-#sidebar>h3:hover {
+.sidebar>h3:hover {
     transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
-#sidebar>ul>li:hover {
+.sidebar>ul>li:hover {
     transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* 본문 영역*/
@@ -137,7 +138,7 @@ nav {
     width: 900px;
 }
 
-.contents {
+#content {
     display: grid;
     grid-template-columns: 200px 1fr;
     width: 1100px;
@@ -177,10 +178,7 @@ main h3 {
     margin-right: 50px;
     border-radius: 20px;
     object-fit: cover;
-}
-
-.detail>img:hover {
-    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 .schedule h4 {
@@ -198,13 +196,18 @@ main h3 {
 /* 푸터 영역*/
 
 footer {
-    width: 1440px;
-    height: 100px;
+    width: 100%;
+    height: 150px;
     border-top: 2px solid #222;
+    padding: 20px;
+}
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
 }
 
 #bottommenu {
-    width: 100%;
     height: 20px;
     margin-left: 60px;
 }
@@ -224,7 +227,9 @@ footer {
 }
 
 #bottommenu ul li a,
-#bottommenu ul li a:visited {
-    font-size: 15px;
+#bottommenu ul li a:visited,
+#bottommenu2 ul li a,
+#bottommenu2 ul li a:visited {
+    font-size: 20px;
     color: #666;
 }

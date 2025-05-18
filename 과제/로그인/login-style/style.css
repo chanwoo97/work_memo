@@ -1,6 +1,4 @@
-/* 전체설정 */
-
-@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Nanum+Pen+Script&display=swap');
 
 * {
     margin: 0;
@@ -9,12 +7,12 @@
 }
 
 body {
-    font-family: "Diphylleia", serif;
     background-color: #91b3d4;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Nanum Pen Script", cursive;
 }
 
 a {
@@ -40,38 +38,28 @@ h3 {
 
 /* 헤더 영역 */
 
-header {
-    width: 1440px;
+#header {
+    width: 100%;
     height: 100px;
     background-color: rgb(123, 182, 126);
 }
 
-#logo a {
-    color: black;
-}
-
-#logo h1 {
-    color: white;
-    font-size: 28px;
-}
-
-#logo {
+.logo {
     float: left;
     width: 200px;
     height: 100px;
     line-height: 100px;
-    padding-left: 80px;
-    font-size: 35px;
+    padding-left: 50px;
+    font-size: 28px;
 }
 
 nav {
-    float: right;
+    float: left;
     width: 900px;
     height: 100px;
-    padding-top: 12px;
-    font-size: 22px;
-    font-style: normal;
-    margin-right: 200px;
+    padding-top: 15px;
+    font-size: 24px;
+    margin-left: 90px;
 }
 
 #topmenu {
@@ -89,10 +77,10 @@ nav {
     color: white;
 }
 
-#logo>a>h1:hover {
+.logo>h1>a:hover {
     color: black;
     transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #topmenu>li>a:hover {
@@ -128,6 +116,7 @@ nav {
 label {
     display: block;
     padding-bottom: 20px;
+    font-size: 24px;
 }
 
 input[type="text"],
@@ -145,8 +134,9 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 22px;
     margin-top: 10px;
+    font-family: "Nanum Pen Script", cursive;
 }
 
 section ul {
@@ -157,19 +147,31 @@ section ul {
 section ul li {
     float: left;
     padding: 10px 5px;
-    font-size: 15px;
+    font-size: 20px;
+}
+
+#result {
+    margin: 30px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 6px;
 }
 
 /* 푸터 */
 
 footer {
-    width: 1440px;
-    height: 100px;
+    width: 100%;
+    height: 150px;
     border-top: 2px solid #222;
+    padding: 20px;
+}
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
 }
 
 #bottommenu {
-    width: 100%;
     height: 20px;
     margin-left: 60px;
 }
@@ -189,7 +191,9 @@ footer {
 }
 
 #bottommenu ul li a,
-#bottommenu ul li a:visited {
-    font-size: 15px;
+#bottommenu ul li a:visited,
+#bottommenu2 ul li a,
+#bottommenu2 ul li a:visited {
+    font-size: 20px;
     color: #666;
 }
